@@ -11,6 +11,8 @@ public class ResourceController : MonoBehaviour
     public Button ResourceButton;
     public Image ResourceImage;
 
+    public AudioSource audioupgrade;
+
     public Text ResourceDescription;
 
     public Text ResourceUpgradeCost;
@@ -99,6 +101,7 @@ public class ResourceController : MonoBehaviour
         GameManager._instance.ShowNextResource();
 
         AchievementController.Instance.UnlockAchievement(AchievementType.UnlockResource, _config.Name);
+        audioupgrade.Play();
 
     }
 
@@ -151,6 +154,7 @@ public class ResourceController : MonoBehaviour
         ResourceUpgradeCost.text = $"Upgrade Cost\n{ GetUpgradeCost() }";
 
         ResourceDescription.text = $"{ _config.Name } Lv. { _level }\n+{ GetOutput().ToString("0") }";
+        audioupgrade.Play();
     }
 
     public double GetUnlockCost()
