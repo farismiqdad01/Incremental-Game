@@ -17,7 +17,6 @@ public class ResourceController : MonoBehaviour
 
     private void Start()
     {
-        ResourceButton.onClick.AddListener(UpgradeLevel);
         ResourceButton.onClick.AddListener(() =>
         {
             if (IsUnlocked)
