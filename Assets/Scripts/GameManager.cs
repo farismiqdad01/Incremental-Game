@@ -32,11 +32,10 @@ public class GameManager : MonoBehaviour
     private List<TapText> _tapTextPool = new List<TapText>();
     private float _collectSecond;
 
-    public double _totalGold { get; private set; }
-
     private void Start()
     {
         AddAllResources();
+        GoldInfo.text = $"Gold: { UserDataManager.Progress.Gold.ToString("0") }";
     }
     private void Update()
     {
@@ -83,17 +82,19 @@ public class GameManager : MonoBehaviour
     private void AddAllResources()
     {
         bool showResources = true;
+        int index = 0;
         foreach (ResourceConfig config in ResourcesConfigs)
         {
             GameObject obj = Instantiate(ResourcePrefab.gameObject, ResourcesParent, false);
             ResourceController resource = obj.GetComponent<ResourceController>();
-            resource.SetConfig(config);
+            resource.SetConfig(index,config);
             obj.gameObject.SetActive(showResources);
             if (showResources && !resource.IsUnlocked)
             {
                 showResources = false;
             }
             _activeResources.Add(resource);
+            index++;
         }
     }
 
@@ -116,11 +117,11 @@ public class GameManager : MonoBehaviour
             bool isBuyable = false;
             if (resource.IsUnlocked)
             {
-                isBuyable = _totalGold >= resource.GetUpgradeCost();
+                isBuyable = UserDataManager.Progress.Gold >= resource.GetUpgradeCost();
             }
             else
             {
-                isBuyable = _totalGold >= resource.GetUnlockCost();
+                isBuyable = UserDataManager.Progress.Gold >= resource.GetUnlockCost();
             }
             resource.ResourceImage.sprite = ResourcesSprites[isBuyable ? 1 : 0];
         }
@@ -140,8 +141,8 @@ public class GameManager : MonoBehaviour
     }
     public void AddGold(double value)
     {
-        _totalGold += value;
-        GoldInfo.text = $"Gold: { _totalGold.ToString("0") }";
+        UserDataManager.Progress.Gold += value;
+        GoldInfo.text = $"Gold: { UserDataManager.Progress.Gold.ToString("0") }";
     }
 }
 
