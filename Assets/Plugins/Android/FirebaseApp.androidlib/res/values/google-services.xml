@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="firebase_database_url" translatable="false">gs://incrementalgame-b441e.appspot.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">380698182580</string>
+  <string name="google_storage_bucket" translatable="false">incrementalgame-b441e.appspot.com</string>
+  <string name="project_id" translatable="false">incrementalgame-b441e</string>
+  <string name="google_api_key" translatable="false">AIzaSyCU_RXujTRw0BIxbYGJlpB059AcpxJ1MMU</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCU_RXujTRw0BIxbYGJlpB059AcpxJ1MMU</string>
+  <string name="google_app_id" translatable="false">1:380698182580:android:831bd842e3424e14bfe8e1</string>
+  <string name="default_web_client_id" translatable="false">380698182580-b23i8btor55fa5gttgqp3jlg3fsftk9t.apps.googleusercontent.com</string>
+</resources>

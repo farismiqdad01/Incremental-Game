@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "380698182580",
+    "project_id": "incrementalgame-b441e",
+    "firebase_url": "gs://incrementalgame-b441e.appspot.com",
+    "storage_bucket": "incrementalgame-b441e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380698182580:android:831bd842e3424e14bfe8e1",
+        "android_client_info": {
+          "package_name": "com.mainra.incrementalgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380698182580-b23i8btor55fa5gttgqp3jlg3fsftk9t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU_RXujTRw0BIxbYGJlpB059AcpxJ1MMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380698182580-b23i8btor55fa5gttgqp3jlg3fsftk9t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
